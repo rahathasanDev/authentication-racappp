@@ -10,16 +10,18 @@ function ReactHook() {
   //let counter = 15
 
   const addValue = () => {
-    setCounter(prevCounter => {
-      const newValue = prevCounter + 1;
-      return newValue <= 20 ? newValue : prevCounter;
-    //counter = counter + 1
-    setCounter(prevCounter => prevCounter + 1)
-    setCounter(prevCounter => prevCounter + 1 )
-    setCounter(prevCounter => prevCounter + 1)
-    setCounter(prevCounter => prevCounter + 1)
     
+    //counter = counter + 1
+    // setCounter(prevCounter => prevCounter + 1)
+    if (counter <= 19) {
+      setCounter(prevCounter => prevCounter + 1);
+      return "Incremented successfully!";
+    } else {
+        return "Counter is already at maximum value (20)!";
+    }
+      
   }
+   
 
   const removeValue = () => {
     const updatedCounter = counter - 1;
