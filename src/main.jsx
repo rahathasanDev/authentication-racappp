@@ -12,6 +12,7 @@ import Login from './Components/Login.jsx';
 import Friends from './Components/Friends.jsx';
 import Home from './Components/Home.jsx';
 import About from './Components/About.jsx';
+import ReactHook from './ReactHook.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -38,6 +39,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />
+    <ReactHook></ReactHook>
     <App></App>
   </React.StrictMode>,
 )
